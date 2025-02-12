@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  resources :collaborators, only: [:index]
+  namespace :api do
+    namespace :v1 do
+      resources :collaborators, only: [:index]
+    end
+  end
 end
