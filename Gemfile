@@ -61,3 +61,4 @@ end
 
 gem "ransack"
 gem "faker"
+gem 'rack-cors', require: 'rack/cors'
