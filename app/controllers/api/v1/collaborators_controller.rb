@@ -4,6 +4,11 @@ module Api::V1
       @q = Collaborator.ransack(params[:q] || {})
       @collaborators = @q.result
       render json: @collaborators
-    end  
+    end
+
+    def show
+      @collaborator = Collaborator.find_by(uuid: params[:id])
+      render json: @collaborator
+    end
   end
 end
