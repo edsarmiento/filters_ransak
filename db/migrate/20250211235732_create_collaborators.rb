@@ -5,9 +5,15 @@ class CreateCollaborators < ActiveRecord::Migration[7.2]
       t.string :last_name
       t.string :email
       t.string :uuid
+      t.datetime :time_on_teams
+      t.boolean :certified
+      t.string :seniorityColla
+      t.string :tech_stack
+      t.string :total_montly_salary
+      t.string :account
+      t.datetime :started_arkus_nexus
 
       t.timestamps
     end
-    add_index :collaborators, :uuid, unique: true
   end
 end

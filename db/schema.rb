@@ -16,8 +16,14 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_11_235732) do
     t.string "last_name"
     t.string "email"
     t.string "uuid"
+    t.datetime "time_on_teams"
+    t.boolean "certified"
+    t.string "seniority"
+    t.string "tech_stack"
+    t.string "total_montly_salary"
+    t.string "account"
+    t.datetime "started_arkus_nexus"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["uuid"], name: "index_collaborators_on_uuid", unique: true
   end
 end
